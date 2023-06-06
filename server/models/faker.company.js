@@ -1,7 +1,7 @@
-const { faker } = require('@faker-js/faker');
+const { faker } = require('@faker-js/faker'); // this is the line that imports the faker module
 
-const createCompany = () => {
-    const newCompany = {
+const createCompany = () => { // this is the function that will create the object
+    const newCompany = { // this is the object that we will return
         _id: faker.string.uuid(),
         name: faker.company.name(),
         address: {
@@ -12,7 +12,7 @@ const createCompany = () => {
             country: faker.location.country()
         }
     };
-    return newCompany;
+    return newCompany; // this is the key line that exports the object
 }
 
-module.exports = createCompany();
+module.exports = createCompany(); // this is the key line that exports the function
